@@ -1,0 +1,6 @@
+employee_code;name;lastname;address;age;start_date;salary;position;department
+1;meera;joe;address_1;40;03-05-1980;2500;head;abc
+2;jacky;timy;address_2;60;05-05-1980;20500;pos1;def
+3;sandy;cool;address_3;90; 03-05-1980;25003;head of dept;xyz
+1;joe;doe;address_4;40;03-05-1980;2500;head;abc
+5;johnny;peters;address_5;40;03-05-1980;2501;head;abc

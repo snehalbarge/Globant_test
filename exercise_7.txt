@@ -1,0 +1,13 @@
+1. What is the problem in the following code?
+
+Ans 1. In the given code, the variable total and the sum of transactions are having unequal values. It should give same values.
+
+
+2. How do you solve it?
+
+Ans 2. In the code, we are using a variable total0 which stores the value of the global variable. So, if we remove that variable total0 and use total instead of total0, we will get the total equal to the sum of transactions.
+
+
+3. Will it happen the same problem using processes instead of threads. Why?
+
+Ans 3. Yes, using processes instead of threads will also give same problem. It is because multiple processes are run across multiple CPU cores and each process can have many threads running in its own memory space which do not share the resources among them. It implies that the global variable total will take 0 as value and return the total as 0, which will cause the same problem that we are facing using threads.

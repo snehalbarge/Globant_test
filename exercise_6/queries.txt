@@ -1,0 +1,33 @@
+select p2.product_id, p2.name
+,count(r.review_id) as relevence 
+from users u
+inner join cart_item ci
+on ci.user_id = u.user_id
+inner join product p1
+on p1.product_id = ci.product_id
+
+ 
+
+--join product with similar categories bought or picked by others
+inner join product p2
+on p2.catogory_id = p1.catogory_id
+and p2.product_id != p1.product_id
+
+ 
+
+--join product with similar categories bought or picked by others who have bought or picked
+--the same prouct in their shopping cart
+inner join cart_item ci2
+on p2.product_id = ci2.product_id
+and p2.product_id != ci.product_id
+
+ 
+
+--get the relevence of the product.
+inner join review r
+on r.product_id = p2.product_id
+where u.user_id = ?  --( PUT THE USER ID OF LOGGED IN USER)
+group by p2.product_id, p2.name
+
+--sort product by relevence
+order by relevence

@@ -1,0 +1,27 @@
+Suppose that you have 5 Python projects which you’re working on and each of them have their own dependencies (libraries). These projects have common dependencies but different versions of the same dependencies.
+
+1. How could you handle this case? How would you solve it?
+
+Ans 1. In this case, I would use virtual environment for every projects. A virtual environment is an isolated runtime environment that helps to keep dependencies required by different projects separate by creating isolated python virtual environments for them. The python intrepreter, libraries and scripts installed in a virtual environment are isolated from those installed in other virtual environments. This way we can easily manage different versions of same dependencies on different projects.
+
+
+2. If you imported objects from some module, will the requested objects be loaded only?
+ or will all the objects and definitions be loaded?. Explain.
+
+Ans 2. This depends on how we are using the import statement for importing the module. For example, if we import objects like “from re import findall” then only findall will be loaded but if we use it like “from re import *”, then it will load all the objects and definitions inside re module.
+
+
+3. If you imported objects from a module, would the lines code outside of functions and classes
+ be executed?
+
+Ans 3. No, the lines code outside of function or class will not be executed. If there are some independent statements like print or some function calling then only it will be executed else only imported object will be executed.
+
+
+4. What is the purpose of “if __name__ == __main__” in the bottom part of any module? When will it be executed?
+
+Ans 4. The purpose of using “if __name__==__main__” is to prevent certain code from being run when the module is imported. If we want some statements like print statement or test cases to be executed when it'll be running as main (and not imported), we can place those statements under this “if __name__==__main__” block.
+
+
+
+
+
